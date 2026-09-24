@@ -63,20 +63,56 @@ const education = [
   },
 ];
 
+const capabilities = [
+  {
+    title: "AI & Automation",
+    skills: [
+      "Generative AI",
+      "Microsoft Copilot Studio",
+      "RAG & AI Agents",
+      "Power Automate",
+      "Dataverse",
+      "Responsible AI",
+    ],
+  },
+  {
+    title: "Data & Machine Learning",
+    skills: [
+      "Python",
+      "SQL",
+      "Pandas & NumPy",
+      "Power BI",
+      "Machine Learning",
+      "TensorFlow / Keras",
+    ],
+  },
+  {
+    title: "Software Engineering",
+    skills: [
+      "TypeScript / JavaScript",
+      "Next.js / React",
+      "REST APIs",
+      "Django",
+      "Git / GitHub",
+      "Docker",
+    ],
+  },
+];
+
 const projects = [
   {
-    featured: "Featured Project",
+    featured: "Featured AI & Automation Project",
     title: "Civic System",
     subtitle: "AI Council Services Assistant",
     description:
-      "An independent AI-enabled public-sector services prototype demonstrating how conversational AI, retrieval-augmented generation and Microsoft Power Platform can support council-service information, controlled transactions and human escalation.",
+      "An independent public-sector AI prototype designed to demonstrate how residents could access grounded council-service information, complete controlled service actions and escalate to human support through a conversational interface.",
     highlights: [
       "22-document grounded knowledge base",
-      "RAG-powered service guidance",
-      "Controlled Power Automate transactions",
-      "Dataverse persistence and staff review",
-      "Responsible AI and human oversight",
-      "23 defined prototype test scenarios passed",
+      "RAG-based service information retrieval",
+      "Power Automate service-request workflows",
+      "Dataverse request persistence",
+      "Human-support escalation pathway",
+      "23/23 defined prototype test scenarios passed",
     ],
     technologies: [
       "Copilot Studio",
@@ -97,14 +133,14 @@ const projects = [
     title: "ASC Neighbourhood Intelligence",
     subtitle: "Adult Social Care Demand & Strategic Analytics",
     description:
-      "A neighbourhood intelligence solution integrating population, deprivation and Adult Social Care data to identify demand patterns, inequalities and emerging service pressures for evidence-led strategic planning.",
+      "A neighbourhood intelligence solution integrating population, deprivation and Adult Social Care data to identify geographical demand, inequality and emerging service pressures for evidence-led planning.",
     highlights: [
-      "Multi-source neighbourhood data integration",
-      "Referral-rate analysis",
-      "Deprivation inequality analysis",
-      "Demand trend modelling",
-      "12-month forecasting",
-      "Interactive Power BI reporting",
+      "1,355 referrals analysed",
+      "Highest neighbourhood rate: 285.7 per 1,000",
+      "1.34× referral-rate difference by deprivation",
+      "24-month demand trend analysed",
+      "13.9% projected 12-month increase",
+      "Interactive Power BI decision-support dashboard",
     ],
     technologies: [
       "Python",
@@ -124,14 +160,14 @@ const projects = [
     title: "Multi-Asset Financial Forecasting",
     subtitle: "Machine Learning & Deep Learning",
     description:
-      "A postgraduate machine-learning project exploring financial-market forecasting across multiple asset classes and timeframes using engineered time-series features and classical and deep-learning models.",
+      "A postgraduate machine-learning project developing and evaluating forecasting pipelines across multiple financial asset classes using engineered time-series features, classical machine learning and deep-learning architectures.",
     highlights: [
-      "Multi-asset financial time series",
-      "Feature engineering",
-      "Machine-learning model comparison",
-      "CNN and recurrent neural networks",
-      "Trading-performance evaluation",
-      "Risk and drawdown analysis",
+      "Multi-asset financial time-series pipeline",
+      "Feature engineering and preprocessing",
+      "Classical ML and deep-learning comparison",
+      "CNN and recurrent neural-network architectures",
+      "Model evaluation against baseline behaviour",
+      "Trading-performance and risk analysis",
     ],
     technologies: [
       "Python",
@@ -171,12 +207,12 @@ export default function Home() {
             <span>01.</span> About
           </a>
 
-          <a href="#experience">
-            <span>02.</span> Experience
+          <a href="#projects">
+            <span>02.</span> Projects
           </a>
 
-          <a href="#projects">
-            <span>03.</span> Projects
+          <a href="#experience">
+            <span>03.</span> Experience
           </a>
 
           <a href="#contact">
@@ -203,12 +239,12 @@ export default function Home() {
 
             <h1>Alvin Newman-Samuels.</h1>
 
-            <h2>I build AI, data and digital solutions.</h2>
+            <h2>AI, Data &amp; Software Engineer.</h2>
 
             <p className="heroDescription">
-              I&apos;m a Computer Science professional combining software
-              engineering, artificial intelligence, data analytics and
-              Microsoft Power Platform to build practical digital solutions.
+              I build practical AI, automation, data and software solutions
+              that turn complex requirements into reliable, user-focused
+              digital products.
             </p>
 
             <div className="heroActions">
@@ -255,17 +291,17 @@ export default function Home() {
           <div className="aboutContent">
             <div className="aboutText">
               <p>
-                Hello! I&apos;m Alvin, a Computer Science professional with a
-                background in software engineering and a strong interest in
-                building practical technology that solves real-world problems.
+                I&apos;m an AI, Data &amp; Software Engineer with an MSc in
+                Computer Science and a background in software engineering,
+                building practical solutions across artificial intelligence,
+                automation, data analytics and software development.
               </p>
 
               <p>
-                I hold an MSc in Computer Science and my work spans artificial
-                intelligence, data analytics, machine learning, financial
-                technology and digital systems. I enjoy taking complex
-                requirements and turning them into solutions that are useful,
-                understandable and technically robust.
+                My work spans AI-enabled systems, data engineering, analytics,
+                machine learning and digital solutions. I enjoy translating
+                complex technical and business requirements into solutions
+                that are useful, understandable and technically robust.
               </p>
 
               <p>
@@ -275,74 +311,27 @@ export default function Home() {
                 AI-powered council services assistant, neighbourhood
                 intelligence analytics and multi-asset financial forecasting.
               </p>
-
-              <p>Here are some technologies I&apos;ve been working with:</p>
-
-              <ul className="skillsList">
-                <li>Python</li>
-                <li>SQL</li>
-                <li>Microsoft Copilot Studio</li>
-                <li>Power BI</li>
-                <li>Power Automate</li>
-                <li>Power Apps</li>
-                <li>Dataverse</li>
-                <li>Machine Learning</li>
-                <li>Next.js</li>
-                <li>TypeScript</li>
-              </ul>
             </div>
-          </div>
-        </section>
 
-        {/* EXPERIENCE */}
+            <div className="capabilitiesBlock">
+              <p className="capabilitiesIntro">Core capabilities</p>
 
-        <section id="experience" className="experienceSection">
-          <div className="sectionHeading">
-            <h2>
-              <span>02.</span> Experience
-            </h2>
+              <div className="capabilitiesGrid">
+                {capabilities.map((capability) => (
+                  <article
+                    className="capabilityCard"
+                    key={capability.title}
+                  >
+                    <h3 className="capabilityTitle">{capability.title}</h3>
 
-            <div className="headingLine"></div>
-          </div>
-
-          <div className="experienceTimeline">
-            {experience.map((job) => (
-              <article className="experienceItem" key={job.company}>
-                <div className="timelineMarker"></div>
-
-                <div className="experienceCard">
-                  <div className="experienceTop">
-                    <div>
-                      <h3>{job.role}</h3>
-                      <p className="company">{job.company}</p>
-                    </div>
-
-                    <p className="experiencePeriod">{job.period}</p>
-                  </div>
-
-                  <ul className="experienceDescription">
-                    {job.description.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <div className="educationBlock">
-            <h3 className="educationTitle">Education</h3>
-
-            <div className="educationGrid">
-              {education.map((item) => (
-                <article className="educationCard" key={item.degree}>
-                  <p className="educationPeriod">{item.period}</p>
-
-                  <h4>{item.degree}</h4>
-
-                  <p>{item.institution}</p>
-                </article>
-              ))}
+                    <ul className="capabilityList">
+                      {capability.skills.map((skill) => (
+                        <li key={skill}>{skill}</li>
+                      ))}
+                    </ul>
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -352,7 +341,7 @@ export default function Home() {
         <section id="projects" className="projectsSection">
           <div className="sectionHeading">
             <h2>
-              <span>03.</span> Featured Projects
+              <span>02.</span> Featured Projects
             </h2>
 
             <div className="headingLine"></div>
@@ -360,8 +349,10 @@ export default function Home() {
 
           <div className="projectsIntro">
             <p>
-              A selection of projects demonstrating my work across artificial
-              intelligence, automation, data analytics and machine learning.
+              Selected projects demonstrating how I apply AI, data engineering,
+              analytics and machine learning to practical problems—from
+              public-service automation to strategic intelligence and
+              financial forecasting.
             </p>
           </div>
 
@@ -430,6 +421,59 @@ export default function Home() {
           </div>
         </section>
 
+        {/* EXPERIENCE */}
+
+        <section id="experience" className="experienceSection">
+          <div className="sectionHeading">
+            <h2>
+              <span>03.</span> Experience
+            </h2>
+
+            <div className="headingLine"></div>
+          </div>
+
+          <div className="experienceTimeline">
+            {experience.map((job) => (
+              <article className="experienceItem" key={job.company}>
+                <div className="timelineMarker"></div>
+
+                <div className="experienceCard">
+                  <div className="experienceTop">
+                    <div>
+                      <h3>{job.role}</h3>
+                      <p className="company">{job.company}</p>
+                    </div>
+
+                    <p className="experiencePeriod">{job.period}</p>
+                  </div>
+
+                  <ul className="experienceDescription">
+                    {job.description.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="educationBlock">
+            <h3 className="educationTitle">Education</h3>
+
+            <div className="educationGrid">
+              {education.map((item) => (
+                <article className="educationCard" key={item.degree}>
+                  <p className="educationPeriod">{item.period}</p>
+
+                  <h4>{item.degree}</h4>
+
+                  <p>{item.institution}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CONTACT */}
 
         <section id="contact" className="contactSection">
@@ -439,16 +483,13 @@ export default function Home() {
 
           <p className="contactDescription">
             I&apos;m interested in opportunities across artificial
-            intelligence, automation, data analytics, software engineering and
-            digital transformation. Whether you&apos;re recruiting,
-            collaborating on a project or simply want to connect, I&apos;d be
-            happy to hear from you.
+            intelligence, data engineering, software engineering, automation
+            and analytics. Whether you&apos;re recruiting, collaborating on a
+            project or simply want to connect, I&apos;d be happy to hear from
+            you.
           </p>
 
-          <a
-            href="mailto:alvino.ans@gmail.com"
-            className="contactButton"
-          >
+          <a href="mailto:alvino.ans@gmail.com" className="contactButton">
             Say Hello
           </a>
 
