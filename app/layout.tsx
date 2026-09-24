@@ -1,28 +1,29 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import StructuredData from "./structured-data";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://alvinnewmansamuels.co.uk"),
 
   title: {
-    default: "Alvin Newman-Samuels | AI, Data & Digital Solutions",
+    default: "Alvin Newman-Samuels | AI, Data & Software Engineer",
     template: "%s | Alvin Newman-Samuels",
   },
 
   description:
-    "Portfolio of Alvin Newman-Samuels, a Computer Science professional building AI, automation, data analytics, machine learning and digital solutions using Python, Microsoft Power Platform, Copilot Studio and modern software technologies.",
+    "Portfolio of Alvin Newman-Samuels, an AI, Data & Software Engineer building practical solutions across artificial intelligence, automation, data analytics, machine learning and software engineering.",
 
   keywords: [
     "Alvin Newman-Samuels",
     "AI Engineer",
-    "AI Automation Engineer",
-    "Automation Engineer",
-    "Data Analyst",
     "Data Engineer",
     "Software Engineer",
+    "AI Automation Engineer",
+    "Data Analyst",
     "Computer Science",
-    "Generative AI",
     "Artificial Intelligence",
+    "Generative AI",
+    "Machine Learning",
     "RAG",
     "AI Agents",
     "Microsoft Copilot Studio",
@@ -33,7 +34,6 @@ export const metadata: Metadata = {
     "Power BI",
     "Python",
     "SQL",
-    "Machine Learning",
     "Next.js",
     "TypeScript",
   ],
@@ -53,20 +53,29 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Alvin Newman-Samuels | AI, Data & Digital Solutions",
+    title: "Alvin Newman-Samuels | AI, Data & Software Engineer",
     description:
-      "Explore my work across artificial intelligence, automation, data analytics, machine learning and digital solutions.",
+      "Explore my work across artificial intelligence, automation, data analytics, machine learning and software engineering.",
     url: "https://alvinnewmansamuels.co.uk",
     siteName: "Alvin Newman-Samuels Portfolio",
     locale: "en_GB",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Alvin Newman-Samuels - AI, Data & Software Engineer",
+      },
+    ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Alvin Newman-Samuels | AI, Data & Digital Solutions",
+    title: "Alvin Newman-Samuels | AI, Data & Software Engineer",
     description:
-      "AI, automation, data analytics, machine learning and digital solutions portfolio.",
+      "Artificial intelligence, automation, data analytics, machine learning and software engineering portfolio.",
+    images: ["/opengraph-image.png"],
   },
 
   robots: {
@@ -91,7 +100,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-GB">
-      <body>{children}</body>
+      <body>
+        <StructuredData />
+        {children}
+      </body>
     </html>
   );
 }
